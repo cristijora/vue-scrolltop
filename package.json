@@ -1,0 +1,60 @@
+{
+  "name": "vue-scrolltop",
+  "version": "1.0.0",
+  "description": "Scroll top component for Vue 2.x",
+  "main": "dist/vue-scrolltop.common.js",
+  "unpkg": "dist/vue-scrolltop",
+  "poi": {
+    "entry": "dev/main.js",
+    "dist": "dev/dist",
+    "homepage": "/vue-scrolltop/"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo 'no tests!' && npm run lint",
+    "prepublish": "npm run build",
+    "lint": "xo",
+    "build": "bili",
+    "build:example": "poi build",
+    "dev": "poi --port 5000"
+  },
+  "author": "cristian.jora <cristian.jora@corebuild.eu>",
+  "license": "MIT",
+  "dependencies": {
+    "smoothscroll-polyfill": "^0.3.6",
+    "throttle-debounce": "^1.0.1",
+    "vue-feather-icons": "^0.1.1"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "bili": "^0.16.0-rc.2",
+    "eslint-config-rem": "^3.0.0",
+    "node-sass": "^4.5.3",
+    "poi": "^9.1.0",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-vue": "^2.4.2",
+    "sass-loader": "^6.0.6",
+    "vue": "^2.4.2",
+    "xo": "^0.18.0"
+  },
+  "xo": {
+    "extends": "rem/prettier",
+    "ignores": [
+      "dev/**"
+    ]
+  },
+  "babel": {
+    "presets": [
+      [
+        "vue-app",
+        {
+          "useBuiltIns": true,
+          "modules": false
+        }
+      ]
+    ]
+  }
+}
